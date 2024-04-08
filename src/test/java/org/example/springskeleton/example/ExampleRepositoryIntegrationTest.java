@@ -1,13 +1,13 @@
 package org.example.springskeleton.example;
 
-import org.example.springskeleton.SpringIntegrationTest;
+import org.example.springskeleton.core.SpringIntegrationBaseTest;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-class ExampleRepositoryIntegrationTest extends SpringIntegrationTest {
+class ExampleRepositoryIntegrationTest extends SpringIntegrationBaseTest {
 
   @Autowired
   private ExampleRepository exampleRepository;

@@ -35,7 +35,7 @@ public class CoverageTest {
   };
 
   @ArchTest
-  static final ArchRule controllersNeedToHaveAssociatedTestClasses =
+  static final ArchRule controllersNeedToHaveAssociatedTestClassesAndProperCoverage =
       classes()
           .that()
           .areAnnotatedWith(RestController.class)
@@ -44,7 +44,7 @@ public class CoverageTest {
 
 
   @ArchTest
-  static final ArchRule controllersAndServicesNeedToHaveAssociatedTestClasses =
+  static final ArchRule servicesNeedToHaveAssociatedTestClassesAndProperCoverage =
       classes()
           .that()
           .areAnnotatedWith(Service.class)
@@ -52,7 +52,7 @@ public class CoverageTest {
           .andShould(havePercentMethodCoverage(MIN_METHOD_COVERAGE_SERVICE));
 
   @ArchTest
-  static final ArchRule repositoriesNeedToHaveAssociatedTestsForAllMethods =
+  static final ArchRule repositoriesNeedToHaveAssociatedTestClassesAndProperCoverage =
       classes()
           .that()
           .areMetaAnnotatedWith(Repository.class)
